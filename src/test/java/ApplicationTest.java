@@ -39,7 +39,7 @@ public class ApplicationTest {
         driver.findElement(By.tagName("label")).click();
         driver.findElement(By.className("button__content")).click();
         String expected = "  Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
-        String actual = driver.findElement(By.tagName("p")).getText();
+        String actual = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText();
         Assertions.assertEquals(expected,actual);
     }
 
